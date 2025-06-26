@@ -48,6 +48,7 @@
                                     <tr>
                                         <th scope="col">#</th>
                                         <th scope="col">Title</th>
+                                        <th scope="col">Slug</th>
                                         <th scope="col">Created At</th>
                                         <th scope="col">Action</th>
                                     </tr>
@@ -61,6 +62,7 @@
                                             <tr>
                                                 <th scope="row">{{ $i }}</th>
                                                 <td>{{ $setting->title }}</td>
+                                                <td>{{ $setting->slug ?? '' }}</td>
                                                 <td>
                                                     {{ $setting->created_at->format('Y-m-d H:i:s') }}
                                                 </td>
@@ -91,7 +93,7 @@
                                         @endforeach
                                     @else
                                         <tr>
-                                            <td colspan="4" class="text-center">No settings found.</td>
+                                            <td colspan="5" class="text-center">No settings found.</td>
                                         </tr>
                                     @endif
                                 </tbody>
